@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: 'My Gatsby Markdown Starter',
-        author: 'Myself (with Gatsby)'
+        title: 'Mairie de Lasgraïsses',
+        author: 'Mairie de Lasgraïsses'
     },
     plugins: [
         'gatsby-plugin-react-helmet',
