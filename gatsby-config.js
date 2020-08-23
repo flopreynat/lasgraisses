@@ -9,17 +9,25 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                name: 'src',
+                name: 'posts',
                 path: `${__dirname}/src/posts`
             }
         },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                name: 'src',
+                name: 'events',
                 path: `${__dirname}/src/events`
             }
         },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'images',
+                path: `${__dirname}/src/images`
+            }
+        },
+        'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
         {
             resolve: 'gatsby-transformer-remark',

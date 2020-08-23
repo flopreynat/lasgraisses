@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from "../components/head";
-import indexStyles from '../components/index.scss';
-import bgImage from '../components/images/logos/logo.jpg';
-import 'typeface-open-sans';
+import React from 'react'
+import Head from "../components/head"
+import indexStyles from '../components/index.scss'
+import 'typeface-open-sans'
+import logo from '../images/logos/logo.jpg'
 
 const IndexPage = () => {
     return (
@@ -12,7 +12,7 @@ const IndexPage = () => {
 
             </div>
             <div className="absolutePos1">
-                <img src={bgImage} alt="Logo" className="logoMairie" />
+                <img src={logo} alt="Logo" className="logoMairie" />
                 <h3>Bienvenue à</h3>
                 <h1>Lasgraïsses</h1>
             </div>

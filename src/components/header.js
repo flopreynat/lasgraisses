@@ -1,7 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-
+import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap"
 import headerStyles from "./header.module.scss"
+import logo from '../images/logos/logo.jpg'
+import bannerImg from '../images/village/IMG_20200517_174905.jpg'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -16,73 +18,42 @@ const Header = () => {
 
   return (
     <header>
-      <div className="masthead text-center text-white">
-        <div className="masthead-content">
-          <div className="container">
-            {/* <h1 className="masthead-heading mb-0">Welcome</h1>
-            <h2 className="masthead-subheading mb-0">home</h2> */}
-          </div>
-        </div>
-        <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-          <div className="container">
+      <Navbar bg="white" expand="lg" sticky="top">
+        <Container>
+          <Navbar.Brand>
             <Link className="navbar-brand" to="/">
-              {data.site.siteMetadata.title}
+            <img src={logo} alt="Logo" className="logoMairie navIcon" /> {data.site.siteMetadata.title}
             </Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarResponsive">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    activeClassName={headerStyles.activeNavItem}
-                    to="/"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    activeClassName={headerStyles.activeNavItem}
-                    to="/blog"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    activeClassName={headerStyles.activeNavItem}
-                    to="/calendar"
-                  >
-                    Calendar
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    activeClassName={headerStyles.activeNavItem}
-                    to="/about"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    activeClassName={headerStyles.activeNavItem}
-                    to="/contact"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link>
+                <Link to="real_index" className="nav-link">Bienvenue</Link>
+              </Nav.Link>
+              <NavDropdown title="Mon Village" id="basic-nav-dropdown" className="nav-link">
+                <NavDropdown.Item>
+                  <Link to="/mon-village/hitoire" className="nav-link">Histoire</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/#" className="nav-link">Conseil Municipal</Link>
+                  </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                <Link to="/#" className="nav-link">Élections</Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link>
+                <Link to="/blog" className="nav-link">Blog</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/calendar" className="nav-link">Actualités</Link>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <div className="divBannerImg"></div>
     </header>
   )
 }

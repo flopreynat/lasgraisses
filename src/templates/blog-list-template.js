@@ -1,7 +1,8 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/layout";
-import Head from "../components/head";
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
+import Head from "../components/head"
+import { Container, Row, Col } from "react-bootstrap"
 
 export default class BlogList extends React.Component {
   render() {
@@ -14,22 +15,35 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <Head title="Blog"/>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return <div key={node.fields.slug}>
-              <h3><Link to={`${node.frontmatter.type}${node.fields.slug}`}>{title}</Link></h3>
-              </div>
-        })}
-        {!isFirst && (
-        <Link to={`blog/${prevPage}`} rel="prev">
-          ← Previous Page
-        </Link>
-      )}
-      {!isLast && (
-        <Link to={`blog/${nextPage}`} rel="next">
-          Next Page →
-        </Link>
-      )}
+        <div className="breadcrumbs">
+          <Container>
+            <p>Vous êtes ici: to be replaced</p>
+          </Container>  
+        </div>
+        <div className="pageContent">
+          <Container>
+            <Row>
+              <Col>
+                {posts.map(({ node }) => {
+                  const title = node.frontmatter.title || node.fields.slug
+                  return <div key={node.fields.slug}>
+                      <h3><Link to={`${node.frontmatter.type}${node.fields.slug}`}>{title}</Link></h3>
+                      </div>
+                })}
+                {!isFirst && (
+                <Link to={`blog/${prevPage}`} rel="prev">
+                  ← Previous Page
+                </Link>
+                )}
+                {!isLast && (
+                  <Link to={`blog/${nextPage}`} rel="next">
+                    Next Page →
+                  </Link>
+                )}
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </Layout>
     )
   }
