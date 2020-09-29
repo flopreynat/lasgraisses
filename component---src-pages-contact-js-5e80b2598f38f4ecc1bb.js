@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"Cuy+":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),r=a("Bl7J"),c=a("hIod");t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"Contact"}),l.a.createElement("h1",null,"Contact"),l.a.createElement("p",null,"The best way to reach me is via ",l.a.createElement("a",{href:"https://twitter.com/@mytwitterhandle",target:"_blank"},"@myself")," on Twitter!"))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-5e80b2598f38f4ecc1bb.js.map

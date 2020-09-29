@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-blog-list-template-js","path":"/blog/2","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/post-four/"},"frontmatter":{"title":"Post Four","type":"blog"}}}]}},"pageContext":{"limit":3,"skip":3,"numPages":2,"currentPage":2}}}

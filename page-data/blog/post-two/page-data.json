@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-post-template-js","path":"/blog/post-two/","result":{"data":{"markdownRemark":{"frontmatter":{"title":"Post Two","date":"2019-04-02"},"html":"<p>This is my second post.</p>"}},"pageContext":{"slug":"/post-two/"}}}

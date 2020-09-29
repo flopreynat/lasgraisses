@@ -1,0 +1,1 @@
+{"data":{"blog":{"edges":[{"node":{"fields":{"slug":"/post-one/"},"frontmatter":{"title":"Post One","type":"blog"}}},{"node":{"fields":{"slug":"/post-two/"},"frontmatter":{"title":"Post Two","type":"blog"}}}]},"event":{"edges":[{"node":{"fields":{"slug":"/event-one/"},"frontmatter":{"title":"Event One","type":"calendar"}}}]}}}
